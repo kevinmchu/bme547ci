@@ -6,6 +6,7 @@ Last Modified: 2/1/19
 DESCRIPTION: This program takes a string as an input and determines whether
 it contains the word "tachycardic".
 '''
+import re
 
 
 def is_tachycardic(test_str):
@@ -13,6 +14,9 @@ def is_tachycardic(test_str):
     test_str = test_str.lower()
     # Remove extra whitespace
     test_str = test_str.replace(' ', '')
+
+    # Remove leading and trailing punctuation
+    test_str = re.sub(r'\W', '', test_str)
 
     isTachycardic = False
 
