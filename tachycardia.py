@@ -9,7 +9,10 @@ it contains the word "tachycardic".
 
 
 def is_tachycardic(test_str):
+    # Make all characters lowercase
     test_str = test_str.lower()
+    # Remove extra whitespace
+    test_str = test_str.replace(' ', '')
 
     isTachycardic = False
 
