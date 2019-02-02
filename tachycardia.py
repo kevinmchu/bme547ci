@@ -9,6 +9,8 @@ it contains the word "tachycardic".
 
 
 def is_tachycardic(test_str):
+    test_str = test_str.lower()
+
     isTachycardic = False
 
     if test_str == "tachycardic":

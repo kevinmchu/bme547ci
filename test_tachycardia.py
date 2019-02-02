@@ -1,4 +1,13 @@
+import pytest
 from tachycardia import is_tachycardic
+
+
+@pytest.mark.parametrize("test_str, expected", [('TACHYCARDIC', True),
+                                                ('HELLO', False)])
+def test_is_tachycardic(test_str, expected):
+
+    answer = is_tachycardic(test_str)
+    assert answer == expected
 
 
 def test_1():
