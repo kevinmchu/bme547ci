@@ -10,7 +10,9 @@ from tachycardia import is_tachycardic
                                                 ('  tachycardic  ', True),
                                                 ('hello', False),
                                                 ('HELLO', False),
-                                                ('HeLlO', False)])
+                                                ('HeLlO', False),
+                                                ('', False),
+                                                ('     ', False)])
 def test_is_tachycardic(test_str, expected):
 
     answer = is_tachycardic(test_str)
