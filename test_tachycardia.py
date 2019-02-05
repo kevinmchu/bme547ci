@@ -11,11 +11,20 @@ from tachycardia import is_tachycardic
                                                 ('.tachycardic', True),
                                                 ('tachycardic.', True),
                                                 (';tachycardic;', True),
+                                                ('..tachycardic', True),
+                                                ('hellotachycardic', True),
+                                                ('1234tachycardic', True),
+                                                ('!@#$tachycardic', True),
+                                                ('\ntachycardic\n', True),
+                                                ('tachycardia', False),
+                                                ('tachycard1c', False),
                                                 ('hello', False),
                                                 ('HELLO', False),
                                                 ('HeLlO', False),
                                                 ('', False),
-                                                ('     ', False)])
+                                                ('     ', False),
+                                                ('tachy.cardic', False),
+                                                ('tachy cardic', False)])
 def test_is_tachycardic(test_str, expected):
 
     answer = is_tachycardic(test_str)
